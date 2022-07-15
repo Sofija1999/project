@@ -83,6 +83,7 @@ export default function NewExpense() {
           setValues({...values, error: '', redirect: true})
         }
     })
+  
   }
 
     if (values.redirect) {
@@ -97,7 +98,6 @@ export default function NewExpense() {
           <br/>
           <TextField id="title" label="Naziv" className={classes.textField} value={values.title} onChange={handleChange('title')} margin="normal"/><br/>
           <TextField id="amount" label="Iznos ($)" className={classes.textField} value={values.amount} onChange={handleChange('amount')} margin="normal" type="number"/><br/>
-          
           <TextField id="category" label="Kategorija" className={classes.textField} value={values.category} onChange={handleChange('category')} margin="normal"/><br/>
           <br/>
           <MuiPickersUtilsProvider utils={DateFnsUtils}>
